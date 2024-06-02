@@ -112,23 +112,8 @@ test('Add Donation To Cart Test', async ({ page, browser }) => {
         await checkoutPage.clickPaymentMethodButton();
         await checkoutPage.selectVisaPaymentMethodButton();
 
-        await checkoutPage.assertCCNameIsVisible();
-        await checkoutPage.fillCCName();
-
-        await checkoutPage.assertCCNumberIsVisible();
-        await checkoutPage.fillCCNumber();
-
-        await checkoutPage.assertCCExpirationDateIsVisible();
-        await checkoutPage.fillCCExpirationDate();
-
-        await checkoutPage.assertCCSecurityCodeIsVisible();
-        await checkoutPage.fillCCSecurityCode();
-
-        await checkoutPage.assertCCAddressIsVisible();
-        await checkoutPage.fillCCAddress();
-
-        await checkoutPage.assertCCPostalCodeIsVisible();
-        await checkoutPage.fillCCPostalCode();
+        await checkoutPage.assertEntireCCForm();
+        await checkoutPage.fillEntireCCForm();
 
         await checkoutPage.assertCaptchaSectionIsVisible();
         await checkoutPage.clickCaptchaSection();
